@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c0b0trckgjaf1"]
+
+[ext_resource type="Texture2D" uid="uid://cjp8fm1o0jttw" path="res://assets/images/internet/HappyFace.jpg" id="1_tjff3"]
+[ext_resource type="Script" uid="uid://7j4rqdm485bs" path="res://scripts/npcScript.gd" id="2_2e40l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2h45r"]
+size = Vector3(1, 1, 0.6)
+
+[node name="npcTest" type="Sprite3D" unique_id=642156442]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+texture = ExtResource("1_tjff3")
+script = ExtResource("2_2e40l")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=764014484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.7600001, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=484842676]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 1.9999999)
+shape = SubResource("BoxShape3D_2h45r")

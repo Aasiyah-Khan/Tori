@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dnkw4ulx148kp"]
+
+[ext_resource type="PackedScene" uid="uid://db4ukj4itk8w4" path="res://scenes/player_controller.tscn" id="1_q8e8a"]
+[ext_resource type="Texture2D" uid="uid://cjp8fm1o0jttw" path="res://assets/images/internet/HappyFace.jpg" id="2_4y8u5"]
+[ext_resource type="Script" uid="uid://7j4rqdm485bs" path="res://scripts/npcScript.gd" id="3_cvkkd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2h45r"]
+
+[node name="ToriMain" type="Node3D" unique_id=332308133]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1167836873]
+transform = Transform3D(-0.9848077, 0, 0.1736483, 0, 1, 0, -0.1736483, 0, -0.9848077, 0, 0.90000004, -6.5)
+
+[node name="Map" type="Node3D" parent="." unique_id=39683633]
+
+[node name="ToriMap" type="CSGCombiner3D" parent="Map" unique_id=1426929622]
+
+[node name="Plain" type="CSGBox3D" parent="Map/ToriMap" unique_id=1548006576]
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 3.4848459, 0, -0.050000012, -2.9848459)
+size = Vector3(1, 0.1, 2)
+
+[node name="Wall1" type="CSGBox3D" parent="Map/ToriMap" unique_id=275991644]
+transform = Transform3D(0, -0.9999999, 0, 1.4999998, 2.9802322e-08, 0, 0, 0, 3.4848452, 0.79999995, 0.75, -2.9848459)
+size = Vector3(1, 0.1, 2)
+
+[node name="Wall2" type="CSGBox3D" parent="Map/ToriMap" unique_id=1502766899]
+transform = Transform3D(0, -0.9999999, 0, 1.4999998, 2.9802322e-08, 0, 0, 0, 3.4848452, -0.8000001, 0.75, -2.9848459)
+size = Vector3(1, 0.1, 2)
+
+[node name="Roof" type="CSGBox3D" parent="Map/ToriMap" unique_id=1245165357]
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 3.4848459, 0, 1.5500001, -2.9848459)
+size = Vector3(1, 0.1, 2)
+
+[node name="PlayerController" parent="." unique_id=1549381582 instance=ExtResource("1_q8e8a")]
+transform = Transform3D(0.305, 0, 0, 0, 0.305, 0, 0, 0, 0.305, 0, 0.3, 0.3)
+collision_layer = 2
+
+[node name="npcTest" type="Sprite3D" parent="." unique_id=642156442 node_paths=PackedStringArray("player")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0.3, -6.2)
+texture = ExtResource("2_4y8u5")
+script = ExtResource("3_cvkkd")
+player = NodePath("../PlayerController")
+
+[node name="Area3D" type="Area3D" parent="npcTest" unique_id=764014484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.7600001, 0, 0, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="npcTest/Area3D" unique_id=484842676]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 4.0000076)
+shape = SubResource("BoxShape3D_2h45r")
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=345007175]
+wait_time = 5.0
+autostart = true
+
+[connection signal="body_entered" from="npcTest/Area3D" to="npcTest" method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="SpawnTimer" to="npcTest" method="_on_spawn_timer_timeout"]
