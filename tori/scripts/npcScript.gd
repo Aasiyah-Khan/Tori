@@ -18,6 +18,12 @@ var can_move = false
 #For Timer
 var timeNumber = 0
 
+#Reference for Dialogue Manager
+@onready var dialogue_manager: CanvasLayer = $"../DialogueManager"
+
+#Reference for Dialogue Data
+@export var dialogue_data: DialogueData
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	npc_test.hide()
@@ -27,6 +33,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if can_move == true:
 		npc_test.position.z += SPEED * delta
+	
+	if dialogue_manager.branchDialogueFinished == true:
+		npc_test.hide()
+		can_move = false
 
 
 func _on_spawn_timer_timeout() -> void:
@@ -40,4 +50,6 @@ func _on_spawn_timer_timeout() -> void:
 func _on_area_3d_body_entered(body):
 	if body == player: #if the body detected is the player run this code:
 		can_move = false
-		print("Hello Sir!")
+		
+		#Dialogue 
+		dialogue_manager.startDialogue(dialogue_data)

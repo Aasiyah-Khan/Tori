@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://cxrwckiwpk5h1"]
+
+[ext_resource type="Script" uid="uid://br4ab8xxtyphg" path="res://scripts/dialogue_data.gd" id="1_36rj7"]
+
+[resource]
+script = ExtResource("1_36rj7")
+openingDialogue = Array[String](["Hello", "TESTING", "Are you doing okay?"])
+yesDialogue = Array[String](["Oh really!", "That's good!"])
+noDialogue = Array[String](["Awww", "That's too bad."])
+metadata/_custom_type_script = "uid://br4ab8xxtyphg"
