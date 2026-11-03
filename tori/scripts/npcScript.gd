@@ -51,5 +51,6 @@ func _on_area_3d_body_entered(body):
 	if body == player: #if the body detected is the player run this code:
 		can_move = false
 		
-		#Dialogue 
+		#Specific resource for this npc with its specific dialogue will be used for this convo
+		#AND Start dialogue with this resource!
 		dialogue_manager.startDialogue(dialogue_data)

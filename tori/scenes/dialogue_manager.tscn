@@ -206,18 +206,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(939, 250)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("NPC Images/NPC2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(18, 250)]
-}
 
 [sub_resource type="Animation" id="Animation_507jh"]
 resource_name = "pop_down"
@@ -231,19 +219,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(939, 250), Vector2(939, 457)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("NPC Images/NPC2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(18, 250), Vector2(18, 457)]
+"values": [Vector2(939, 250), Vector2(939, 660)]
 }
 
 [sub_resource type="Animation" id="Animation_jf0e1"]
@@ -258,19 +234,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(939, 453), Vector2(939, 250)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("NPC Images/NPC2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(18, 453), Vector2(18, 250)]
+"values": [Vector2(939, 653), Vector2(939, 250)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jcw1y"]
@@ -278,6 +242,58 @@ _data = {
 &"RESET": SubResource("Animation_5hf3l"),
 &"pop_down": SubResource("Animation_507jh"),
 &"pop_up": SubResource("Animation_jf0e1")
+}
+
+[sub_resource type="Animation" id="Animation_jcw1y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NPC Images/AdvisorNPC:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(18, 249.00002)]
+}
+
+[sub_resource type="Animation" id="Animation_ercc2"]
+resource_name = "pop_down"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NPC Images/AdvisorNPC:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(18, 249.00002), Vector2(18, 657)]
+}
+
+[sub_resource type="Animation" id="Animation_pfpkg"]
+resource_name = "pop_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NPC Images/AdvisorNPC:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(18, 656), Vector2(18, 250)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t6t0s"]
+_data = {
+&"RESET": SubResource("Animation_jcw1y"),
+&"pop_down": SubResource("Animation_ercc2"),
+&"pop_up": SubResource("Animation_pfpkg")
 }
 
 [node name="DialogueManager" type="CanvasLayer" unique_id=903628950]
@@ -320,29 +336,29 @@ offset_bottom = -200.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="YesButton" type="Area2D" parent="ButtonContainer" unique_id=666438941]
+[node name="GreenButton" type="Area2D" parent="ButtonContainer" unique_id=666438941]
 position = Vector2(363, 102)
 script = ExtResource("2_61474")
-buttonChoice = "YES"
+buttonChoice = "GREEN"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ButtonContainer/YesButton" unique_id=1426957851]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ButtonContainer/GreenButton" unique_id=1426957851]
 sprite_frames = SubResource("SpriteFrames_2h45r")
 animation = &"Idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonContainer/YesButton" unique_id=80222025]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonContainer/GreenButton" unique_id=80222025]
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_2h45r")
 
-[node name="NoButton" type="Area2D" parent="ButtonContainer" unique_id=99498587]
-position = Vector2(771, 102)
+[node name="RedButton" type="Area2D" parent="." unique_id=99498587]
+position = Vector2(771, 371)
 script = ExtResource("2_61474")
-buttonChoice = "NO"
+buttonChoice = "RED"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ButtonContainer/NoButton" unique_id=1238350122]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RedButton" unique_id=1238350122]
 sprite_frames = SubResource("SpriteFrames_tsmfw")
 animation = &"Hover"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonContainer/NoButton" unique_id=573854126]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedButton" unique_id=573854126]
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_2h45r")
 
@@ -361,25 +377,56 @@ offset_bottom = 1530.0
 scale = Vector2(0.1526392, 0.1526392)
 texture = ExtResource("5_5hf3l")
 
-[node name="NPC2" type="TextureRect" parent="NPC Images" unique_id=101850387]
+[node name="AdvisorNPC" type="TextureRect" parent="NPC Images" unique_id=101850387]
 layout_mode = 0
 offset_left = 18.0
-offset_top = 250.0
+offset_top = 249.00002
 offset_right = 1298.0
-offset_bottom = 1530.0
+offset_bottom = 1529.0
 scale = Vector2(0.1526392, 0.1526392)
 texture = ExtResource("5_5hf3l")
+
+[node name="ChoiceText" type="Control" parent="." unique_id=1368075673]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GreenText" type="Label" parent="ChoiceText" unique_id=1245728501]
+z_index = 2
+layout_mode = 0
+offset_left = 11.0
+offset_top = 553.0
+offset_right = 96.0
+offset_bottom = 576.0
+theme_override_colors/font_color = Color(0.24313726, 0.68235296, 0.40392157, 1)
+theme_override_font_sizes/font_size = 16
+text = "Green Text"
+
+[node name="RedText" type="Label" parent="ChoiceText" unique_id=1783450205]
+z_index = 2
+layout_mode = 0
+offset_left = 12.0
+offset_top = 605.0
+offset_right = 79.0
+offset_bottom = 628.0
+theme_override_colors/font_color = Color(0.6745098, 0.19607843, 0.19607843, 1)
+theme_override_font_sizes/font_size = 16
+text = "Red Text"
 
 [node name="Timer" type="Timer" parent="." unique_id=277816518]
 wait_time = 0.1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2055588651]
+[node name="NPC1_AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2055588651]
 libraries/ = SubResource("AnimationLibrary_jcw1y")
 
-[connection signal="input_event" from="ButtonContainer/YesButton" to="ButtonContainer/YesButton" method="_on_input_event"]
-[connection signal="mouse_entered" from="ButtonContainer/YesButton" to="ButtonContainer/YesButton" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="ButtonContainer/YesButton" to="ButtonContainer/YesButton" method="_on_mouse_exited"]
-[connection signal="input_event" from="ButtonContainer/NoButton" to="ButtonContainer/NoButton" method="_on_input_event"]
-[connection signal="mouse_entered" from="ButtonContainer/NoButton" to="ButtonContainer/NoButton" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="ButtonContainer/NoButton" to="ButtonContainer/NoButton" method="_on_mouse_exited"]
+[node name="AdvisorNPC_AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1615757351]
+libraries/ = SubResource("AnimationLibrary_t6t0s")
+
+[connection signal="input_event" from="ButtonContainer/GreenButton" to="ButtonContainer/GreenButton" method="_on_input_event"]
+[connection signal="mouse_entered" from="ButtonContainer/GreenButton" to="ButtonContainer/GreenButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ButtonContainer/GreenButton" to="ButtonContainer/GreenButton" method="_on_mouse_exited"]
+[connection signal="input_event" from="RedButton" to="RedButton" method="_on_input_event"]
+[connection signal="mouse_entered" from="RedButton" to="RedButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="RedButton" to="RedButton" method="_on_mouse_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
