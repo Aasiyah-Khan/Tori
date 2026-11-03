@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://dlqas53w1ykks"]
+
+[ext_resource type="Script" uid="uid://br4ab8xxtyphg" path="res://scripts/dialogue_data.gd" id="1_s5vwf"]
+
+[resource]
+script = ExtResource("1_s5vwf")
+openingDialogue = Array[String](["Villager- After months of trying, I have finally gotten an audience with you.", "Villager- Please listen to my request, or rather, complaint", "You- Go on.", "Villager- My neighbor has been very suspicious recently.", "Villager- I see him leaving for somewhere every night.", "Villager- I think he’s up to something."])
+yesDialogue = Array[String](["Okay, I'll send someone to keep an eye on him.", "Thank you for bringing this to my attention."])
+noDialogue = Array[String](["Surely he's not up to anything nefarious."])
+greenChoiceText = "Investigate"
+redChoiceText = "Leave it"
+metadata/_custom_type_script = "uid://br4ab8xxtyphg"

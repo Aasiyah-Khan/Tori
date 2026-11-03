@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://dhcpsi3tkbjxk"]
+
+[ext_resource type="Script" uid="uid://br4ab8xxtyphg" path="res://scripts/dialogue_data.gd" id="1_myxhd"]
+
+[resource]
+script = ExtResource("1_myxhd")
+openingDialogue = Array[String](["Lieutenant - The neighboring village is doing construction by our border line. Their workers keep picking fights with my men.", "Lieutenant- If we don’t do something soon, a huge fight might arise. "])
+metadata/_custom_type_script = "uid://br4ab8xxtyphg"
