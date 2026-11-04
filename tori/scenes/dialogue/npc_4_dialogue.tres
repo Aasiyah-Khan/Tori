@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://chmu4kuwxtsfh"]
+
+[ext_resource type="Script" uid="uid://br4ab8xxtyphg" path="res://scripts/dialogue_data.gd" id="1_2ujwi"]
+
+[resource]
+script = ExtResource("1_2ujwi")
+openingDialogue = Array[String](["Wealthy Citizen-  I have come with a proposition.", "Wealthy Citizen-Our family has been one of your biggest supporters since your great-great-grandfather came into power. ", "Wealthy Citizen- What better way to show our support and strength in unity than to join families?", "You- What are you getting at?", "Wealthy Citizen- It’s prime time for you to continue your lineage. ", "Wealthy Citizen-  I have a daughter around your age who is interested.", "You- Uhh...", "Advisor- I wouldn’t pass up this opportunity. ", "Advisor- Think of the power you’d gain with one of the village’s strongest families backing you directly."])
+yesDialogue = Array[String](["You- Thank you for the opportunity.", "You- I'll accept your proposal.", "You- Though, I would like to meet your daughter first.", "Wealthy Citizen- Of course. I'll let her know the good news.", "Wealthy Citizen- My family will continue to help you."])
+noDialogue = Array[String](["You- Thank you for the opportunity.", "You- Respectfully, I'll have to decline.", "Wealthy Citizen- How unfortunate.", "Wealthy Citizen- You'll regret this."])
+greenChoiceText = "Accept the offer"
+redChoiceText = "Decline the offer"
+metadata/_custom_type_script = "uid://br4ab8xxtyphg"
