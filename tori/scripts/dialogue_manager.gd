@@ -117,8 +117,6 @@ func _input(event):
 				green_text.text = currentDialogueData.greenChoiceText
 				red_text.text = currentDialogueData.redChoiceText
 				
-				npc_1_animation_player.play("pop_up")
-				advisor_npc_animation_player.play("pop_up")
 				green_text.show()
 				red_text.show()
 			else:

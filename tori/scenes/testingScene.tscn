@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://c301wkl7hsy12"]
+
+[ext_resource type="Texture2D" uid="uid://blnkbi6t2wnc2" path="res://assets/images/sprites/YesButton-Sheet.png" id="1_o2htg"]
+[ext_resource type="Script" uid="uid://dujx7yw6l4xbf" path="res://scripts/buttonTEST.gd" id="2_cioyt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ne6po"]
+atlas = ExtResource("1_o2htg")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8ct1"]
+atlas = ExtResource("1_o2htg")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgco3"]
+atlas = ExtResource("1_o2htg")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cp4sj"]
+atlas = ExtResource("1_o2htg")
+region = Rect2(450, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjgss"]
+atlas = ExtResource("1_o2htg")
+region = Rect2(600, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4lyy"]
+atlas = ExtResource("1_o2htg")
+region = Rect2(750, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybynq"]
+atlas = ExtResource("1_o2htg")
+region = Rect2(900, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdung"]
+atlas = ExtResource("1_o2htg")
+region = Rect2(1050, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8onr"]
+atlas = ExtResource("1_o2htg")
+region = Rect2(1200, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2rgw"]
+atlas = ExtResource("1_o2htg")
+region = Rect2(1350, 0, 150, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tsmfw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ne6po")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8ct1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgco3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cp4sj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjgss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4lyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybynq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdung")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8onr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2rgw")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o2htg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cioyt"]
+bg_color = Color(0.1254902, 0.39215687, 0.13333334, 0.5882353)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2htg"]
+bg_color = Color(0.26666668, 0.57254905, 0.23529412, 0.39215687)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=716650772]
+z_index = 1
+position = Vector2(532, 306)
+sprite_frames = SubResource("SpriteFrames_tsmfw")
+frame_progress = 0.13639273
+
+[node name="Button" type="Button" parent="." unique_id=2127289180]
+offset_left = -72.0
+offset_top = -77.0
+offset_right = -64.0
+offset_bottom = -69.0
+scale = Vector2(17.942226, 17.942226)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_o2htg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cioyt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o2htg")
+script = ExtResource("2_cioyt")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

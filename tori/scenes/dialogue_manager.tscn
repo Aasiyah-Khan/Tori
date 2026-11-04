@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://blnkbi6t2wnc2" path="res://assets/images/sprites/YesButton-Sheet.png" id="3_5hf3l"]
 [ext_resource type="Texture2D" uid="uid://pb2xtx6ksf5d" path="res://assets/images/sprites/NoButton-Sheet.png" id="4_507jh"]
 [ext_resource type="Texture2D" uid="uid://cjp8fm1o0jttw" path="res://assets/images/internet/HappyFace.jpg" id="5_5hf3l"]
+[ext_resource type="Texture2D" uid="uid://cbr4bdspweigr" path="res://assets/images/sprites/advisor_testface.png" id="6_507jh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2h45r"]
 font_size = 32
@@ -256,7 +257,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(18, 249.00002)]
+"values": [Vector2(18, 237)]
 }
 
 [sub_resource type="Animation" id="Animation_ercc2"]
@@ -286,7 +287,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(18, 656), Vector2(18, 250)]
+"values": [Vector2(18, 656), Vector2(18, 239)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t6t0s"]
@@ -349,16 +350,16 @@ animation = &"Idle"
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_2h45r")
 
-[node name="RedButton" type="Area2D" parent="." unique_id=99498587]
-position = Vector2(771, 371)
+[node name="RedButton" type="Area2D" parent="ButtonContainer" unique_id=99498587]
+position = Vector2(771, 102)
 script = ExtResource("2_61474")
 buttonChoice = "RED"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RedButton" unique_id=1238350122]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ButtonContainer/RedButton" unique_id=1238350122]
 sprite_frames = SubResource("SpriteFrames_tsmfw")
 animation = &"Hover"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RedButton" unique_id=573854126]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonContainer/RedButton" unique_id=573854126]
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_2h45r")
 
@@ -380,11 +381,11 @@ texture = ExtResource("5_5hf3l")
 [node name="AdvisorNPC" type="TextureRect" parent="NPC Images" unique_id=101850387]
 layout_mode = 0
 offset_left = 18.0
-offset_top = 249.00002
-offset_right = 1298.0
-offset_bottom = 1529.0
-scale = Vector2(0.1526392, 0.1526392)
-texture = ExtResource("5_5hf3l")
+offset_top = 237.0
+offset_right = 194.0
+offset_bottom = 479.00003
+scale = Vector2(0.868, 0.868)
+texture = ExtResource("6_507jh")
 
 [node name="ChoiceText" type="Control" parent="." unique_id=1368075673]
 layout_mode = 3
@@ -400,7 +401,7 @@ offset_top = 553.0
 offset_right = 96.0
 offset_bottom = 576.0
 theme_override_colors/font_color = Color(0.24313726, 0.68235296, 0.40392157, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 24
 text = "Green Text"
 
 [node name="RedText" type="Label" parent="ChoiceText" unique_id=1783450205]
@@ -411,7 +412,7 @@ offset_top = 605.0
 offset_right = 79.0
 offset_bottom = 628.0
 theme_override_colors/font_color = Color(0.6745098, 0.19607843, 0.19607843, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 24
 text = "Red Text"
 
 [node name="Timer" type="Timer" parent="." unique_id=277816518]
@@ -426,7 +427,7 @@ libraries/ = SubResource("AnimationLibrary_t6t0s")
 [connection signal="input_event" from="ButtonContainer/GreenButton" to="ButtonContainer/GreenButton" method="_on_input_event"]
 [connection signal="mouse_entered" from="ButtonContainer/GreenButton" to="ButtonContainer/GreenButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="ButtonContainer/GreenButton" to="ButtonContainer/GreenButton" method="_on_mouse_exited"]
-[connection signal="input_event" from="RedButton" to="RedButton" method="_on_input_event"]
-[connection signal="mouse_entered" from="RedButton" to="RedButton" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="RedButton" to="RedButton" method="_on_mouse_exited"]
+[connection signal="input_event" from="ButtonContainer/RedButton" to="ButtonContainer/RedButton" method="_on_input_event"]
+[connection signal="mouse_entered" from="ButtonContainer/RedButton" to="ButtonContainer/RedButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ButtonContainer/RedButton" to="ButtonContainer/RedButton" method="_on_mouse_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
