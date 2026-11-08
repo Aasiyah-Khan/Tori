@@ -1,12 +1,12 @@
-[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://chmu4kuwxtsfh"]
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://bhureavhulx5s"]
 
-[ext_resource type="Script" uid="uid://br4ab8xxtyphg" path="res://scripts/dialogue_data.gd" id="1_2ujwi"]
+[ext_resource type="Script" uid="uid://br4ab8xxtyphg" path="res://scripts/dialogue_data.gd" id="1_6lcvh"]
 
 [resource]
-script = ExtResource("1_2ujwi")
-openingDialogue = Array[String](["Wealthy Citizen-  I have come with a proposition.", "Wealthy Citizen-Our family has been one of your biggest supporters since your great-great-grandfather came into power. ", "Wealthy Citizen- What better way to show our support and strength in unity than to join families?", "You- What are you getting at?", "Wealthy Citizen- It’s prime time for you to continue your lineage. ", "Wealthy Citizen-  I have a daughter around your age who is interested.", "You- Uhh...", "Advisor- I wouldn’t pass up this opportunity. ", "Advisor- Think of the power you’d gain with one of the village’s strongest families backing you directly."])
-yesDialogue = Array[String](["You- Thank you for the opportunity.", "You- I'll accept your proposal.", "You- Though, I would like to meet your daughter first.", "Wealthy Citizen- Of course. I'll let her know the good news.", "Wealthy Citizen- My family will continue to help you."])
-noDialogue = Array[String](["You- Thank you for the opportunity.", "You- Respectfully, I'll have to decline.", "Wealthy Citizen- How unfortunate.", "Wealthy Citizen- You'll regret this."])
-greenChoiceText = "Accept the offer"
-redChoiceText = "Decline the offer"
+script = ExtResource("1_6lcvh")
+openingDialogue = Array[String](["Lieutenant- There has been a breach in our border.", "Lieutenant- Our wall was damaged in the last storm and is in need of repair.", "You- How extensive is the damage?", "Lieutenant- Only a hole in the Eastern Wall the size of two giant snails.", "Advisor- If I may intrude, we have no direct threats to our borders. ", "Advisor- An enemy would have to get through the neighboring villages’ borders to reach us", "You- What are you suggesting?", "Advisor- Save our limited resources for more pressing matters", "Advisor- A small breach in the wall poses no threat to our mighty village. "])
+yesDialogue = Array[String](["You- Any sized hole in the wall is a threat to our borders.", "You- I'll send workers over there first thing tomorrow.", "Lieutenant- Thank you, sir."])
+noDialogue = Array[String](["You- My advisor is right.", "You- I need our workers for other issues.", "You- Thank you for bringing this to my attention, but the wall will have to wait."])
+greenChoiceText = "Fix the wall"
+redChoiceText = "Save repairs for later"
 metadata/_custom_type_script = "uid://br4ab8xxtyphg"

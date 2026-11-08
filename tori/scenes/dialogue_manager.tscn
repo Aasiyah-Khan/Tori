@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://pb2xtx6ksf5d" path="res://assets/images/sprites/NoButton-Sheet.png" id="4_507jh"]
 [ext_resource type="Texture2D" uid="uid://cjp8fm1o0jttw" path="res://assets/images/internet/HappyFace.jpg" id="5_5hf3l"]
 [ext_resource type="Texture2D" uid="uid://cbr4bdspweigr" path="res://assets/images/sprites/advisor_testface.png" id="6_507jh"]
+[ext_resource type="Texture2D" uid="uid://bvbkupsrtfjux" path="res://assets/images/internet/MadFace.png" id="6_ercc2"]
+[ext_resource type="AudioStream" uid="uid://bihvw0iwjqfyf" path="res://assets/audio/clickAudio.wav" id="7_jf0e1"]
+[ext_resource type="Texture2D" uid="uid://dale74oj30tb7" path="res://assets/images/internet/marshmellow.png" id="7_pfpkg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2h45r"]
 font_size = 32
@@ -245,6 +248,110 @@ _data = {
 &"pop_up": SubResource("Animation_jf0e1")
 }
 
+[sub_resource type="Animation" id="Animation_t6t0s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../NPC Images/NPC2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(857, 250)]
+}
+
+[sub_resource type="Animation" id="Animation_ni401"]
+resource_name = "pop_down"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../NPC Images/NPC2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(857, 250), Vector2(857, 665)]
+}
+
+[sub_resource type="Animation" id="Animation_qbc2s"]
+resource_name = "pop_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../NPC Images/NPC2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(857, 653), Vector2(857, 252)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sxg8s"]
+_data = {
+&"RESET": SubResource("Animation_t6t0s"),
+&"pop_down": SubResource("Animation_ni401"),
+&"pop_up": SubResource("Animation_qbc2s")
+}
+
+[sub_resource type="Animation" id="Animation_cwijx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../NPC Images/NPC3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(912.00006, 250)]
+}
+
+[sub_resource type="Animation" id="Animation_l6q0n"]
+resource_name = "pop_down"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../NPC Images/NPC3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(912.00006, 250), Vector2(912.00006, 639)]
+}
+
+[sub_resource type="Animation" id="Animation_yufoy"]
+resource_name = "pop_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../NPC Images/NPC3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(912.00006, 634), Vector2(912.00006, 248.00003)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m3v6d"]
+_data = {
+&"RESET": SubResource("Animation_cwijx"),
+&"pop_down": SubResource("Animation_l6q0n"),
+&"pop_up": SubResource("Animation_yufoy")
+}
+
 [sub_resource type="Animation" id="Animation_jcw1y"]
 length = 0.001
 tracks/0/type = "value"
@@ -378,6 +485,24 @@ offset_bottom = 1530.0
 scale = Vector2(0.1526392, 0.1526392)
 texture = ExtResource("5_5hf3l")
 
+[node name="NPC2" type="TextureRect" parent="NPC Images" unique_id=1801444703]
+layout_mode = 0
+offset_left = 857.0
+offset_top = 653.0
+offset_right = 4697.0
+offset_bottom = 2814.961
+scale = Vector2(0.09167952, 0.09167952)
+texture = ExtResource("6_ercc2")
+
+[node name="NPC3" type="TextureRect" parent="NPC Images" unique_id=1395179902]
+layout_mode = 0
+offset_left = 912.00006
+offset_top = 250.0
+offset_right = 2192.0
+offset_bottom = 1530.0
+scale = Vector2(0.19279619, 0.19279619)
+texture = ExtResource("7_pfpkg")
+
 [node name="AdvisorNPC" type="TextureRect" parent="NPC Images" unique_id=101850387]
 layout_mode = 0
 offset_left = 18.0
@@ -416,13 +541,26 @@ theme_override_font_sizes/font_size = 24
 text = "Red Text"
 
 [node name="Timer" type="Timer" parent="." unique_id=277816518]
-wait_time = 0.1
+wait_time = 0.05
 
 [node name="NPC1_AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2055588651]
 libraries/ = SubResource("AnimationLibrary_jcw1y")
 
+[node name="NPC2_AnimationPlayer" type="AnimationPlayer" parent="." unique_id=999518000]
+root_node = NodePath("../NPC1_AnimationPlayer")
+libraries/ = SubResource("AnimationLibrary_sxg8s")
+
+[node name="NPC3_AnimationPlayer" type="AnimationPlayer" parent="." unique_id=273909457]
+root_node = NodePath("../NPC2_AnimationPlayer")
+libraries/ = SubResource("AnimationLibrary_m3v6d")
+
 [node name="AdvisorNPC_AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1615757351]
 libraries/ = SubResource("AnimationLibrary_t6t0s")
+
+[node name="TypingAudio" type="AudioStreamPlayer2D" parent="." unique_id=1281338815]
+stream = ExtResource("7_jf0e1")
+volume_db = -8.0
+pitch_scale = 0.45
 
 [connection signal="input_event" from="ButtonContainer/GreenButton" to="ButtonContainer/GreenButton" method="_on_input_event"]
 [connection signal="mouse_entered" from="ButtonContainer/GreenButton" to="ButtonContainer/GreenButton" method="_on_mouse_entered"]

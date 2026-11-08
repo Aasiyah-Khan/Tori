@@ -1,12 +1,12 @@
-[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://bhureavhulx5s"]
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://cxmaeoiv36yrp"]
 
-[ext_resource type="Script" uid="uid://br4ab8xxtyphg" path="res://scripts/dialogue_data.gd" id="1_6lcvh"]
+[ext_resource type="Script" uid="uid://br4ab8xxtyphg" path="res://scripts/dialogue_data.gd" id="1_dy44c"]
 
 [resource]
-script = ExtResource("1_6lcvh")
-openingDialogue = Array[String](["Lieutenant- There has been a breach in our border.", "Lieutenant- Our wall was damaged in the last storm and is in need of repair.", "You- How extensive is the damage?", "Lieutenant- Only a hole in the Eastern Wall the size of two giant snails.", "Advisor- If I may intrude, we have no direct threats to our borders. ", "Advisor- An enemy would have to get through the neighboring villages’ borders to reach us", "You- What are you suggesting?", "Advisor- Save our limited resources for more pressing matters", "Advisor- A small breach in the wall poses no threat to our mighty village. "])
-yesDialogue = Array[String](["You- Any sized hole in the wall is a threat to our borders.", "You- I'll send workers over there first thing tomorrow.", "Lieutenant- Thank you, sir."])
-noDialogue = Array[String](["You- My advisor is right.", "You- I need our workers for other issues.", "You- Thank you for bringing this to my attention, but the wall will have to wait."])
-greenChoiceText = "Fix the wall"
-redChoiceText = "Save repairs for later"
+script = ExtResource("1_dy44c")
+openingDialogue = Array[String](["Social Citizen- The mood around our village has been rather dreary for some time. ", "Social Citizen- It’s almost rainy season. How about a festival and a gala to brighten things up?", "Advisor- That sounds like a splendid idea, right, Chief?", "Advisor- *Whispers* With talk of the Marriac Commune expanding ever closer to our borders, the people could use a distraction."])
+yesDialogue = Array[String](["You- A party sounds like a great idea.", "You- I trust you'll handle all of the details?", "Social Citizen- Of course, it'll be the party of the century."])
+noDialogue = Array[String](["You- Maybe this isn't the time for a party.", "You- We need to stay vigilant.", "Social Citizen- You are no fun. The people will resent you for this."])
+greenChoiceText = "Agree"
+redChoiceText = "Disagree"
 metadata/_custom_type_script = "uid://br4ab8xxtyphg"

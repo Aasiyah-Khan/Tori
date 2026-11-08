@@ -17,3 +17,16 @@ class_name DialogueData #Lets other scripts recognize the name DialogueData
 #Fix is here lol (THIS SHOWS THE CHOICES)
 @export var greenChoiceText: String
 @export var redChoiceText: String 
+
+#To make advisor appear or not
+@export var useAdvisorPortrait: bool = false
+@export var useNPCPortrait: bool = true
+
+#Line where the Advisor appears
+@export var advisorAppearsAtLine: int = 0
+
+#Which NPC portrait should appear?
+@export var NPCPortrait: int = 0
+#0 is npc 1
+#1 is npc 2
+#2 is npc 3

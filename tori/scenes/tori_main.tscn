@@ -3,11 +3,18 @@
 [ext_resource type="PackedScene" uid="uid://db4ukj4itk8w4" path="res://scenes/player_controller.tscn" id="1_q8e8a"]
 [ext_resource type="Texture2D" uid="uid://cjp8fm1o0jttw" path="res://assets/images/internet/HappyFace.jpg" id="2_4y8u5"]
 [ext_resource type="Script" uid="uid://7j4rqdm485bs" path="res://scripts/npcScript.gd" id="3_cvkkd"]
-[ext_resource type="Resource" uid="uid://cxrwckiwpk5h1" path="res://scenes/dialogue/npc_1_dialogue.tres" id="4_22nl4"]
+[ext_resource type="Resource" uid="uid://dlqas53w1ykks" path="res://scenes/dialogue/npc_1_dialogue.tres" id="4_22nl4"]
 [ext_resource type="PackedScene" uid="uid://d4hr4q3xnis81" path="res://scenes/dialogue_manager.tscn" id="4_cvkkd"]
 [ext_resource type="AudioStream" uid="uid://dapf66fjkcp0" path="res://assets/audio/testMusic.mp3" id="6_g0bdc"]
+[ext_resource type="Resource" uid="uid://dhcpsi3tkbjxk" path="res://scenes/dialogue/npc_2_dialogue.tres" id="7_5pusj"]
+[ext_resource type="Script" uid="uid://ct8me34srdxej" path="res://scripts/npc_manager.gd" id="7_66fl8"]
+[ext_resource type="Texture2D" uid="uid://bvbkupsrtfjux" path="res://assets/images/internet/MadFace.png" id="7_76f3c"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2h45r"]
+size = Vector3(1, 1, 0.8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7vmcx"]
+size = Vector3(1, 1, 0.8)
 
 [node name="ToriMain" type="Node3D" unique_id=332308133]
 
@@ -38,29 +45,56 @@ size = Vector3(1, 0.1, 2)
 transform = Transform3D(0.305, 0, 0, 0, 0.305, 0, 0, 0, 0.305, 0, 0.3, 0.3)
 collision_layer = 2
 
-[node name="npcTest" type="Sprite3D" parent="." unique_id=642156442 node_paths=PackedStringArray("player")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0.3, -6.2)
-texture = ExtResource("2_4y8u5")
-script = ExtResource("3_cvkkd")
-player = NodePath("../PlayerController")
-dialogue_data = ExtResource("4_22nl4")
-
-[node name="Area3D" type="Area3D" parent="npcTest" unique_id=764014484]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.7600001, 0, 0, 0)
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="npcTest/Area3D" unique_id=484842676]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 4.0000076)
-shape = SubResource("BoxShape3D_2h45r")
-
 [node name="SpawnTimer" type="Timer" parent="." unique_id=345007175]
 wait_time = 5.0
+one_shot = true
 autostart = true
 
 [node name="DialogueManager" parent="." unique_id=903628950 instance=ExtResource("4_cvkkd")]
 
-[node name="testingAudio" type="AudioStreamPlayer3D" parent="." unique_id=356293927]
-stream = ExtResource("6_g0bdc")
+[node name="NPCManager" type="Node3D" parent="." unique_id=187450721 node_paths=PackedStringArray("npc_list", "player")]
+script = ExtResource("7_66fl8")
+npc_list = [NodePath("../NPC\'s/npc1"), NodePath("../NPC\'s/npc2")]
+player = NodePath("../PlayerController")
 
-[connection signal="body_entered" from="npcTest/Area3D" to="npcTest" method="_on_area_3d_body_entered"]
-[connection signal="timeout" from="SpawnTimer" to="npcTest" method="_on_spawn_timer_timeout"]
+[node name="NPC\'s" type="Node3D" parent="." unique_id=1900900094]
+
+[node name="npc1" type="Sprite3D" parent="NPC\'s" unique_id=642156442 node_paths=PackedStringArray("player")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0.32, -6.1)
+texture = ExtResource("2_4y8u5")
+script = ExtResource("3_cvkkd")
+player = NodePath("../../PlayerController")
+dialogue_data = ExtResource("4_22nl4")
+
+[node name="Area3D" type="Area3D" parent="NPC\'s/npc1" unique_id=764014484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.7600001, 0, 0, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPC\'s/npc1/Area3D" unique_id=484842676]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 12.000001, 0, 0, 3)
+shape = SubResource("BoxShape3D_2h45r")
+
+[node name="npc2" type="Sprite3D" parent="NPC\'s" unique_id=349041150 node_paths=PackedStringArray("player")]
+transform = Transform3D(0.030000001, 0, 0, 0, 0.030000001, 0, 0, 0, 0.05, 0, 0.32, -6.1)
+texture = ExtResource("7_76f3c")
+script = ExtResource("3_cvkkd")
+player = NodePath("../../PlayerController")
+dialogue_data = ExtResource("7_5pusj")
+
+[node name="Area3D" type="Area3D" parent="NPC\'s/npc2" unique_id=1650097009]
+transform = Transform3D(1.6666666, 0, 0, 0, 1.6666666, 0, 0, 0, 1.7600001, 0, 0, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPC\'s/npc2/Area3D" unique_id=1738109573]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 12.000001, 0, 0, 3)
+shape = SubResource("BoxShape3D_7vmcx")
+
+[node name="testingAudio" type="AudioStreamPlayer3D" parent="." unique_id=356293927]
+visible = false
+stream = ExtResource("6_g0bdc")
+volume_db = -40.0
+autoplay = true
+
+[connection signal="timeout" from="SpawnTimer" to="NPCManager" method="_on_spawn_timer_timeout"]
+[connection signal="body_entered" from="NPC\'s/npc1/Area3D" to="NPC\'s/npc1" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="NPC\'s/npc2/Area3D" to="NPC\'s/npc2" method="_on_area_3d_body_entered"]

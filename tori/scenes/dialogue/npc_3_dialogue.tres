@@ -1,12 +1,12 @@
-[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://dhcpsi3tkbjxk"]
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://chmu4kuwxtsfh"]
 
-[ext_resource type="Script" uid="uid://br4ab8xxtyphg" path="res://scripts/dialogue_data.gd" id="1_myxhd"]
+[ext_resource type="Script" uid="uid://br4ab8xxtyphg" path="res://scripts/dialogue_data.gd" id="1_2ujwi"]
 
 [resource]
-script = ExtResource("1_myxhd")
-openingDialogue = Array[String](["Lieutenant - The neighboring village is doing construction by our border line. Their workers keep picking fights with my men.", "Lieutenant- If we don’t do something soon, a huge fight might arise. ", "(this is where the advisor walks in)", "Advisor- Apologies for being late. My caravan was travelling at a snail’s pace, if you get what I mean.", "Advisor- Border disputes again? ", "Advisor- Pardon my intrusion, but shouldn’t you put your foot down this time? ", "Advisor- The other villages will think you’re a pushover if you keep letting them test our borders.", "Advisor- Wouldn’t it do you good to fight back instead of trying to negotiate?"])
-yesDialogue = Array[String](["You- I think it's best if we try to keep good relations with the neighboring villages.", "You- I'll send a delegate to talk with their chief.", "Advisor- As you wish."])
-noDialogue = Array[String](["You- For too long has our village been looked down upon. ", "You- Show those men that they shouldn't mess with us or our border."])
-greenChoiceText = "Send a delegate to negotiate with the village"
-redChoiceText = "Tell the Lieutenant to have his men stand their ground"
+script = ExtResource("1_2ujwi")
+openingDialogue = Array[String](["Wealthy Citizen-  I have come with a proposition.", "Wealthy Citizen-Our family has been one of your biggest supporters since your great-great-grandfather came into power. ", "Wealthy Citizen- What better way to show our support and strength in unity than to join families?", "You- What are you getting at?", "Wealthy Citizen- It’s prime time for you to continue your lineage. ", "Wealthy Citizen-  I have a daughter around your age who is interested.", "You- Uhh...", "Advisor- I wouldn’t pass up this opportunity. ", "Advisor- Think of the power you’d gain with one of the village’s strongest families backing you directly."])
+yesDialogue = Array[String](["You- Thank you for the opportunity.", "You- I'll accept your proposal.", "You- Though, I would like to meet your daughter first.", "Wealthy Citizen- Of course. I'll let her know the good news.", "Wealthy Citizen- My family will continue to help you."])
+noDialogue = Array[String](["You- Thank you for the opportunity.", "You- Respectfully, I'll have to decline.", "Wealthy Citizen- How unfortunate.", "Wealthy Citizen- You'll regret this."])
+greenChoiceText = "Accept the offer"
+redChoiceText = "Decline the offer"
 metadata/_custom_type_script = "uid://br4ab8xxtyphg"

@@ -1,12 +1,14 @@
-[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://dlqas53w1ykks"]
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://dhcpsi3tkbjxk"]
 
-[ext_resource type="Script" uid="uid://br4ab8xxtyphg" path="res://scripts/dialogue_data.gd" id="1_s5vwf"]
+[ext_resource type="Script" uid="uid://br4ab8xxtyphg" path="res://scripts/dialogue_data.gd" id="1_myxhd"]
 
 [resource]
-script = ExtResource("1_s5vwf")
-openingDialogue = Array[String](["Villager- After months of trying, I have finally gotten an audience with you.", "Villager- Please listen to my request, or rather, complaint", "You- Go on.", "Villager- My neighbor has been very suspicious recently.", "Villager- I see him leaving for somewhere every night.", "Villager- I think he’s up to something."])
-yesDialogue = Array[String](["Okay, I'll send someone to keep an eye on him.", "Thank you for bringing this to my attention."])
-noDialogue = Array[String](["Surely he's not up to anything nefarious."])
-greenChoiceText = "Investigate"
-redChoiceText = "Leave it"
+script = ExtResource("1_myxhd")
+openingDialogue = Array[String](["Lieutenant - The neighboring village is doing construction by our border line. ", "Lieutenant - Their workers keep picking fights with my men.", "Lieutenant - If we don’t do something soon, a huge fight might arise. ", "Advisor - Apologies for being late. My caravan was travelling at a snail’s pace, if you get what I mean.", "Advisor - Border disputes again? ", "Advisor - Pardon my intrusion, but shouldn’t you put your foot down this time? ", "Advisor - The other villages will think you’re a pushover if you keep letting them test our borders.", "Advisor - Wouldn’t it do you good to fight back instead of trying to negotiate?"])
+yesDialogue = Array[String](["You- I think it's best if we try to keep good relations with the neighboring villages.", "You- I'll send a delegate to talk with their chief.", "Advisor- As you wish."])
+noDialogue = Array[String](["You- For too long has our village been looked down upon. ", "You- Show those men that they shouldn't mess with us or our border."])
+greenChoiceText = "Send a delegate to negotiate with the village"
+redChoiceText = "Tell the Lieutenant to have his men stand their ground"
+advisorAppearsAtLine = 4
+NPCPortrait = 1
 metadata/_custom_type_script = "uid://br4ab8xxtyphg"

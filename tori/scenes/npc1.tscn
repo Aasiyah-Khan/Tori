@@ -1,18 +1,21 @@
 [gd_scene format=3 uid="uid://c0b0trckgjaf1"]
 
-[ext_resource type="Texture2D" uid="uid://cjp8fm1o0jttw" path="res://assets/images/internet/HappyFace.jpg" id="1_tjff3"]
-[ext_resource type="Script" uid="uid://7j4rqdm485bs" path="res://scripts/npcScript.gd" id="2_2e40l"]
+[ext_resource type="Texture2D" uid="uid://cjp8fm1o0jttw" path="res://assets/images/internet/HappyFace.jpg" id="1_1n70y"]
+[ext_resource type="Script" uid="uid://7j4rqdm485bs" path="res://scripts/npcScript.gd" id="2_c0u8k"]
+[ext_resource type="Resource" uid="uid://dlqas53w1ykks" path="res://scenes/dialogue/npc_1_dialogue.tres" id="3_ktlip"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2h45r"]
 size = Vector3(1, 1, 0.6)
 
-[node name="npcTest" type="Sprite3D" unique_id=642156442]
+[node name="npc1" type="Sprite3D" unique_id=642156442]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
-texture = ExtResource("1_tjff3")
-script = ExtResource("2_2e40l")
+texture = ExtResource("1_1n70y")
+script = ExtResource("2_c0u8k")
+dialogue_data = ExtResource("3_ktlip")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=764014484]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.7600001, 0, 0, 0)
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=484842676]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 1.9999999)

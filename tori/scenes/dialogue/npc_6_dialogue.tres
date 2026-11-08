@@ -1,12 +1,12 @@
-[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://cxmaeoiv36yrp"]
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://djcv3xory3b25"]
 
-[ext_resource type="Script" uid="uid://br4ab8xxtyphg" path="res://scripts/dialogue_data.gd" id="1_dy44c"]
+[ext_resource type="Script" uid="uid://br4ab8xxtyphg" path="res://scripts/dialogue_data.gd" id="1_6nh5t"]
 
 [resource]
-script = ExtResource("1_dy44c")
-openingDialogue = Array[String](["Social Citizen- The mood around our village has been rather dreary for some time. ", "Social Citizen- It’s almost rainy season. How about a festival and a gala to brighten things up?", "Advisor- That sounds like a splendid idea, right, Chief?", "Advisor- *Whispers* With talk of the Marriac Commune expanding ever closer to our borders, the people could use a distraction."])
-yesDialogue = Array[String](["You- A party sounds like a great idea.", "You- I trust you'll handle all of the details?", "Social Citizen- Of course, it'll be the party of the century."])
-noDialogue = Array[String](["You- Maybe this isn't the time for a party.", "You- We need to stay vigilant.", "Social Citizen- You are no fun. The people will resent you for this."])
-greenChoiceText = "Agree"
-redChoiceText = "Disagree"
+script = ExtResource("1_6nh5t")
+openingDialogue = Array[String](["Wealthy citizen- The village’s spending needs to be reexamined. ", "Wealthy citizen- Too much is being spent on weapons and the lower class.", "Wealthy citizen- What about the arts? The beauty of our village?", "You-(Oh snails)", "Advisor- This man is obviously insane.", "Advisor- You shouldn’t bother yourself with such trivial matters.", "Advisor- What if I took care of it for you? Handling the village’s finances, I mean.", "Wealthy citizen- You know he comes from a lower background.", "Wealthy citizen- He’ll definitely help those lowly peasants again."])
+yesDialogue = Array[String](["You- I think I'll keep handling the finances.", "You- Your request is duly noted."])
+noDialogue = Array[String](["You- Yes, I think it'd be best if my advisor handled the money from now on.", "You- He's always been better at math.", "You- Speak to him if you have any complaints."])
+greenChoiceText = "Handle finances yourself"
+redChoiceText = "Let the advisor do it"
 metadata/_custom_type_script = "uid://br4ab8xxtyphg"
