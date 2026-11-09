@@ -429,10 +429,11 @@ color = Color(0, 0, 0, 1)
 
 [node name="DialogueText" type="Label" parent="DialogueBox" unique_id=662025322]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_right = 1157.0
+offset_bottom = 106.0
 text = "This is the dialogue text!"
 label_settings = SubResource("LabelSettings_2h45r")
+autowrap_mode = 3
 
 [node name="ButtonContainer" type="BoxContainer" parent="." unique_id=299721435]
 anchors_preset = 12
@@ -488,9 +489,9 @@ texture = ExtResource("5_5hf3l")
 [node name="NPC2" type="TextureRect" parent="NPC Images" unique_id=1801444703]
 layout_mode = 0
 offset_left = 857.0
-offset_top = 653.0
+offset_top = 250.0
 offset_right = 4697.0
-offset_bottom = 2814.961
+offset_bottom = 2411.961
 scale = Vector2(0.09167952, 0.09167952)
 texture = ExtResource("6_ercc2")
 

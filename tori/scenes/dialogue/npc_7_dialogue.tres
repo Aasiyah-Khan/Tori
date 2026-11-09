@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://bj526ipklcwg7"]
+
+[ext_resource type="Script" uid="uid://br4ab8xxtyphg" path="res://scripts/dialogue_data.gd" id="1_6nh5t"]
+
+[resource]
+script = ExtResource("1_6nh5t")
+openingDialogue = Array[String](["Villager- The roads are in bad condition.", "Villager- Just yesterday I tripped over a pothole. ", "Advisor- He’s just clumsy. I used the roads the other day, and they weren’t that bad.", "Advisor- We can’t waste important resources on frivolous things, especially with war on the horizon.", "Villager- That’s just rude. I can hear you, you know!", "Villager- Our snails need the best roads so that they can travel smoothly.", "Villager- Our snails above everything."])
+yesDialogue = Array[String](["You- Our snails above everything.", "You- I will send workers to repair the roads as soon as possible.", "You- Afterall, we owe the snails everything."])
+noDialogue = Array[String](["You- My advisor is right.", "You- We have far more pressing matters to worry about, especially with the unrest amongst the tribe."])
+greenChoiceText = "Fix the Road"
+redChoiceText = "Save Repairs for Later"
+metadata/_custom_type_script = "uid://br4ab8xxtyphg"

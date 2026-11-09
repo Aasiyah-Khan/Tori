@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bj3s21ry6a065"]
+
+[ext_resource type="Texture2D" uid="uid://cjp8fm1o0jttw" path="res://assets/images/internet/HappyFace.jpg" id="1_nnc31"]
+[ext_resource type="Script" uid="uid://7j4rqdm485bs" path="res://scripts/npcScript.gd" id="2_rjfh7"]
+[ext_resource type="Resource" uid="uid://bj526ipklcwg7" path="res://scenes/dialogue/npc_7_dialogue.tres" id="3_17wyn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2bcm5"]
+size = Vector3(1, 1, 0.8)
+
+[node name="Node3D" type="Node3D" unique_id=684598779]
+
+[node name="npc7" type="Sprite3D" parent="." unique_id=191293815 node_paths=PackedStringArray("player")]
+transform = Transform3D(0.030000001, 0, 0, 0, 0.030000001, 0, 0, 0, 0.05, 0, 0.32, -6.1)
+texture = ExtResource("1_nnc31")
+script = ExtResource("2_rjfh7")
+player = NodePath("")
+dialogue_data = ExtResource("3_17wyn")
+
+[node name="Area3D" type="Area3D" parent="npc7" unique_id=967953285]
+transform = Transform3D(1.6666666, 0, 0, 0, 1.6666666, 0, 0, 0, 1.7600001, 0, 0, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="npc7/Area3D" unique_id=1609875991]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 12.000001, 0, 0, 3)
+shape = SubResource("BoxShape3D_2bcm5")
+
+[connection signal="body_entered" from="npc7/Area3D" to="npc7" method="_on_area_3d_body_entered"]
