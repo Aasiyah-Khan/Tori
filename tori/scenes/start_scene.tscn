@@ -1,0 +1,169 @@
+[gd_scene format=3 uid="uid://c485kc6iyrfv5"]
+
+[ext_resource type="Script" uid="uid://d2dd76vos70lu" path="res://scripts/dialogue_manager_2.gd" id="1_u7rsi"]
+[ext_resource type="FontFile" uid="uid://ce1iq1jschyq3" path="res://assets/fonts/Bungee-Regular.ttf" id="2_0kdh5"]
+[ext_resource type="AudioStream" uid="uid://dshq87qo6x64g" path="res://assets/audio/tuffMusic.mp3" id="2_i331m"]
+[ext_resource type="AudioStream" uid="uid://bihvw0iwjqfyf" path="res://assets/audio/clickAudio.wav" id="3_0kdh5"]
+[ext_resource type="Script" uid="uid://cy24ev2qh3ekl" path="res://scripts/start_button.gd" id="3_sg87u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sg87u"]
+font_size = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sg87u"]
+bg_color = Color(0.61045945, 0.24910873, 0.13674822, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.2097784, 0.34007454, 0.25860676, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2525w"]
+bg_color = Color(0.9113858, 0.58078426, 0.13690689, 0.39215687)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2l3yw"]
+bg_color = Color(0.96200436, 0.5835978, 1.540184e-06, 0.39215687)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.8, 0.8, 0.8, 0.39215687)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Animation" id="Animation_i331m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../TORI:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.9864964, 0.4844172, 5.7756904e-07, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0kdh5"]
+resource_name = "fade_in"
+length = 2.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../TORI:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.9882353, 0.4862745, 0, 0), Color(0.9882353, 0.4862745, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sg87u"]
+_data = {
+&"RESET": SubResource("Animation_i331m"),
+&"fade_in": SubResource("Animation_0kdh5")
+}
+
+[node name="StartScene" type="Node2D" unique_id=700651043]
+
+[node name="Background" type="CanvasLayer" parent="." unique_id=346754795]
+
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=658193009]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="DialogueManager2" type="CanvasLayer" parent="." unique_id=175607533]
+script = ExtResource("1_u7rsi")
+
+[node name="DialogueBox" type="Control" parent="DialogueManager2" unique_id=1776310644]
+z_index = 1
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="DialogueManager2/DialogueBox" unique_id=1801018598]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="DialogueText" type="Label" parent="DialogueManager2/DialogueBox" unique_id=1573956279]
+layout_mode = 0
+offset_right = 1157.0
+offset_bottom = 106.0
+text = "This is the dialogue text!"
+label_settings = SubResource("LabelSettings_sg87u")
+autowrap_mode = 3
+
+[node name="StartButton" type="Button" parent="DialogueManager2" unique_id=1078620928]
+z_index = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -110.00003
+offset_top = 353.0
+offset_right = 125.0
+offset_bottom = 459.0
+grow_horizontal = 2
+scale = Vector2(0.6934446, 0.53825307)
+theme_override_fonts/font = ExtResource("2_0kdh5")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_sg87u")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2525w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2l3yw")
+text = "Start"
+script = ExtResource("3_sg87u")
+
+[node name="TORI" type="Label" parent="DialogueManager2" unique_id=825556283]
+offset_left = 366.0
+offset_top = 171.0
+offset_right = 716.0
+offset_bottom = 341.0
+theme_override_colors/font_color = Color(0.9864964, 0.4844172, 5.7756904e-07, 1)
+theme_override_fonts/font = ExtResource("2_0kdh5")
+theme_override_font_sizes/font_size = 128
+text = "TORI"
+
+[node name="TuffMusic" type="AudioStreamPlayer2D" parent="." unique_id=235998355]
+stream = ExtResource("2_i331m")
+autoplay = true
+
+[node name="TypingAudio" type="AudioStreamPlayer2D" parent="." unique_id=2065945287]
+stream = ExtResource("3_0kdh5")
+volume_db = -8.0
+pitch_scale = 0.45
+
+[node name="Timer" type="Timer" parent="." unique_id=848558910]
+wait_time = 0.1
+
+[node name="ToriAnimation" type="AnimationPlayer" parent="." unique_id=97249651]
+root_node = NodePath("../DialogueManager2/StartButton")
+libraries/ = SubResource("AnimationLibrary_sg87u")
+
+[connection signal="pressed" from="DialogueManager2/StartButton" to="DialogueManager2/StartButton" method="_on_pressed"]
+[connection signal="timeout" from="Timer" to="DialogueManager2" method="_on_timer_timeout"]

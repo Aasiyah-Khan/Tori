@@ -9,4 +9,5 @@ yesDialogue = Array[String](["You- Our snails above everything.", "You- I will s
 noDialogue = Array[String](["You- My advisor is right.", "You- We have far more pressing matters to worry about, especially with the unrest amongst the tribe."])
 greenChoiceText = "Fix the Road"
 redChoiceText = "Save Repairs for Later"
+useAdvisorPortrait = true
 metadata/_custom_type_script = "uid://br4ab8xxtyphg"

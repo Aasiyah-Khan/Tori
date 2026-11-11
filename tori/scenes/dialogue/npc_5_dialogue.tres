@@ -9,4 +9,6 @@ yesDialogue = Array[String](["You- A party sounds like a great idea.", "You- I t
 noDialogue = Array[String](["You- Maybe this isn't the time for a party.", "You- We need to stay vigilant.", "Social Citizen- You are no fun. The people will resent you for this."])
 greenChoiceText = "Agree"
 redChoiceText = "Disagree"
+advisorAppearsAtLine = 3
+NPCPortrait = 2
 metadata/_custom_type_script = "uid://br4ab8xxtyphg"

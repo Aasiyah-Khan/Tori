@@ -1,22 +1,60 @@
 [gd_scene format=3 uid="uid://c0b0trckgjaf1"]
 
-[ext_resource type="Texture2D" uid="uid://cjp8fm1o0jttw" path="res://assets/images/internet/HappyFace.jpg" id="1_1n70y"]
+[ext_resource type="Texture2D" uid="uid://vrkde6c7gunk" path="res://assets/images/sprites/walking_sprite-Sheet.png" id="1_sjcbi"]
 [ext_resource type="Script" uid="uid://7j4rqdm485bs" path="res://scripts/npcScript.gd" id="2_c0u8k"]
 [ext_resource type="Resource" uid="uid://dlqas53w1ykks" path="res://scenes/dialogue/npc_1_dialogue.tres" id="3_ktlip"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_2h45r"]
-size = Vector3(1, 1, 0.6)
+[sub_resource type="AtlasTexture" id="AtlasTexture_6axe0"]
+atlas = ExtResource("1_sjcbi")
+region = Rect2(0, 0, 540, 540)
 
-[node name="npc1" type="Sprite3D" unique_id=642156442]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
-texture = ExtResource("1_1n70y")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1n70y"]
+atlas = ExtResource("1_sjcbi")
+region = Rect2(540, 0, 540, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0u8k"]
+atlas = ExtResource("1_sjcbi")
+region = Rect2(1080, 0, 540, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ktlip"]
+atlas = ExtResource("1_sjcbi")
+region = Rect2(1620, 0, 540, 540)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2h45r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6axe0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1n70y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0u8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ktlip")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tsmfw"]
+
+[node name="npc1" type="AnimatedSprite3D" unique_id=1461166397]
+sprite_frames = SubResource("SpriteFrames_2h45r")
+autoplay = "default"
+frame = 1
+frame_progress = 0.9915281
 script = ExtResource("2_c0u8k")
 dialogue_data = ExtResource("3_ktlip")
 
-[node name="Area3D" type="Area3D" parent="." unique_id=764014484]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.7600001, 0, 0, 0)
+[node name="Area3D" type="Area3D" parent="." unique_id=1171764015]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 6.427575, 0, 0, 0)
 collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=484842676]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 1.9999999)
-shape = SubResource("BoxShape3D_2h45r")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1570380409]
+shape = SubResource("BoxShape3D_tsmfw")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

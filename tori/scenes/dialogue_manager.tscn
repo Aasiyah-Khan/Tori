@@ -2,76 +2,64 @@
 
 [ext_resource type="Script" uid="uid://cbb0fd5c2datf" path="res://scripts/dialogue_manager.gd" id="1_jbixp"]
 [ext_resource type="Script" uid="uid://cp7v1h4k4mxtb" path="res://scripts/dialogue_buttons.gd" id="2_61474"]
-[ext_resource type="Texture2D" uid="uid://blnkbi6t2wnc2" path="res://assets/images/sprites/YesButton-Sheet.png" id="3_5hf3l"]
-[ext_resource type="Texture2D" uid="uid://pb2xtx6ksf5d" path="res://assets/images/sprites/NoButton-Sheet.png" id="4_507jh"]
-[ext_resource type="Texture2D" uid="uid://cjp8fm1o0jttw" path="res://assets/images/internet/HappyFace.jpg" id="5_5hf3l"]
-[ext_resource type="Texture2D" uid="uid://cbr4bdspweigr" path="res://assets/images/sprites/advisor_testface.png" id="6_507jh"]
-[ext_resource type="Texture2D" uid="uid://bvbkupsrtfjux" path="res://assets/images/internet/MadFace.png" id="6_ercc2"]
+[ext_resource type="Texture2D" uid="uid://d1nrr22yye03j" path="res://assets/images/sprites/GreensButton-Sheet.png" id="3_ercc2"]
+[ext_resource type="Texture2D" uid="uid://dpda6j6k35yfg" path="res://assets/images/sprites/RedsButton-Sheet.png" id="4_pfpkg"]
+[ext_resource type="Texture2D" uid="uid://cf1u5h8b7fim2" path="res://assets/images/sprites/old_villager_npc.png" id="5_ercc2"]
+[ext_resource type="Texture2D" uid="uid://cugxuqn5btpd6" path="res://assets/images/sprites/lieutenant_npc.png" id="6_ercc2"]
+[ext_resource type="Texture2D" uid="uid://d1n45j7d2ud3k" path="res://assets/images/sprites/social_citizen_npc.png" id="7_ercc2"]
 [ext_resource type="AudioStream" uid="uid://bihvw0iwjqfyf" path="res://assets/audio/clickAudio.wav" id="7_jf0e1"]
-[ext_resource type="Texture2D" uid="uid://dale74oj30tb7" path="res://assets/images/internet/marshmellow.png" id="7_pfpkg"]
+[ext_resource type="Texture2D" uid="uid://6llaxfybbfp6" path="res://assets/images/sprites/advisor_npc.png" id="8_ercc2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2h45r"]
 font_size = 32
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jf0e1"]
-atlas = ExtResource("3_5hf3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6t0s"]
+atlas = ExtResource("3_ercc2")
 region = Rect2(0, 0, 150, 150)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jcw1y"]
-atlas = ExtResource("3_5hf3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ni401"]
+atlas = ExtResource("3_ercc2")
 region = Rect2(150, 0, 150, 150)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ercc2"]
-atlas = ExtResource("3_5hf3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbc2s"]
+atlas = ExtResource("3_ercc2")
 region = Rect2(300, 0, 150, 150)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pfpkg"]
-atlas = ExtResource("3_5hf3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxg8s"]
+atlas = ExtResource("3_ercc2")
 region = Rect2(450, 0, 150, 150)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t6t0s"]
-atlas = ExtResource("3_5hf3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwijx"]
+atlas = ExtResource("3_ercc2")
 region = Rect2(600, 0, 150, 150)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ni401"]
-atlas = ExtResource("3_5hf3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6q0n"]
+atlas = ExtResource("3_ercc2")
 region = Rect2(750, 0, 150, 150)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qbc2s"]
-atlas = ExtResource("3_5hf3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_yufoy"]
+atlas = ExtResource("3_ercc2")
 region = Rect2(900, 0, 150, 150)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sxg8s"]
-atlas = ExtResource("3_5hf3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3v6d"]
+atlas = ExtResource("3_ercc2")
 region = Rect2(1050, 0, 150, 150)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cwijx"]
-atlas = ExtResource("3_5hf3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6cyw"]
+atlas = ExtResource("3_ercc2")
 region = Rect2(1200, 0, 150, 150)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l6q0n"]
-atlas = ExtResource("3_5hf3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgp6g"]
+atlas = ExtResource("3_ercc2")
 region = Rect2(1350, 0, 150, 150)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_61474"]
-atlas = ExtResource("3_5hf3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2i6ea"]
+atlas = ExtResource("3_ercc2")
 region = Rect2(0, 0, 150, 150)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2h45r"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jf0e1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jcw1y")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ercc2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pfpkg")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t6t0s")
 }, {
@@ -89,70 +77,7 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_l6q0n")
-}],
-"loop": 1,
-"name": &"Hover",
-"speed": 10.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_61474")
-}],
-"loop": 1,
-"name": &"Idle",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2h45r"]
-size = Vector2(136, 104)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yufoy"]
-atlas = ExtResource("4_507jh")
-region = Rect2(0, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m3v6d"]
-atlas = ExtResource("4_507jh")
-region = Rect2(150, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n6cyw"]
-atlas = ExtResource("4_507jh")
-region = Rect2(300, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wgp6g"]
-atlas = ExtResource("4_507jh")
-region = Rect2(450, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2i6ea"]
-atlas = ExtResource("4_507jh")
-region = Rect2(600, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uiwwh"]
-atlas = ExtResource("4_507jh")
-region = Rect2(750, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y5p1q"]
-atlas = ExtResource("4_507jh")
-region = Rect2(900, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vgemh"]
-atlas = ExtResource("4_507jh")
-region = Rect2(1050, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vgyrp"]
-atlas = ExtResource("4_507jh")
-region = Rect2(1200, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8i1dc"]
-atlas = ExtResource("4_507jh")
-region = Rect2(1350, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5hf3l"]
-atlas = ExtResource("4_507jh")
-region = Rect2(0, 0, 150, 150)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_tsmfw"]
-animations = [{
-"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yufoy")
 }, {
@@ -164,10 +89,70 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wgp6g")
+}],
+"loop": 1,
+"name": &"Hover",
+"speed": 10.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2i6ea")
-}, {
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2h45r"]
+size = Vector2(136, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uiwwh"]
+atlas = ExtResource("4_pfpkg")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5p1q"]
+atlas = ExtResource("4_pfpkg")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgemh"]
+atlas = ExtResource("4_pfpkg")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgyrp"]
+atlas = ExtResource("4_pfpkg")
+region = Rect2(450, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8i1dc"]
+atlas = ExtResource("4_pfpkg")
+region = Rect2(600, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bs0vg"]
+atlas = ExtResource("4_pfpkg")
+region = Rect2(750, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iudf7"]
+atlas = ExtResource("4_pfpkg")
+region = Rect2(900, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jbrq"]
+atlas = ExtResource("4_pfpkg")
+region = Rect2(1050, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15uox"]
+atlas = ExtResource("4_pfpkg")
+region = Rect2(1200, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ug1r4"]
+atlas = ExtResource("4_pfpkg")
+region = Rect2(1350, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7sd4"]
+atlas = ExtResource("4_pfpkg")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tsmfw"]
+animations = [{
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uiwwh")
 }, {
@@ -182,6 +167,21 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8i1dc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bs0vg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iudf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jbrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15uox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ug1r4")
 }],
 "loop": 1,
 "name": &"Hover",
@@ -189,7 +189,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5hf3l")
+"texture": SubResource("AtlasTexture_i7sd4")
 }],
 "loop": 1,
 "name": &"Idle",
@@ -208,7 +208,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(939, 250)]
+"values": [Vector2(923.00006, 238)]
 }
 
 [sub_resource type="Animation" id="Animation_507jh"]
@@ -223,7 +223,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(939, 250), Vector2(939, 660)]
+"values": [Vector2(923, 238), Vector2(939, 660)]
 }
 
 [sub_resource type="Animation" id="Animation_jf0e1"]
@@ -238,7 +238,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(939, 653), Vector2(939, 250)]
+"values": [Vector2(923, 653), Vector2(923, 238)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jcw1y"]
@@ -260,7 +260,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(857, 250)]
+"values": [Vector2(923, 238)]
 }
 
 [sub_resource type="Animation" id="Animation_ni401"]
@@ -275,7 +275,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(857, 250), Vector2(857, 665)]
+"values": [Vector2(923, 238), Vector2(923, 656)]
 }
 
 [sub_resource type="Animation" id="Animation_qbc2s"]
@@ -290,7 +290,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(857, 653), Vector2(857, 252)]
+"values": [Vector2(923, 650), Vector2(923, 238)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sxg8s"]
@@ -312,7 +312,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(912.00006, 250)]
+"values": [Vector2(923, 238)]
 }
 
 [sub_resource type="Animation" id="Animation_l6q0n"]
@@ -327,7 +327,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(912.00006, 250), Vector2(912.00006, 639)]
+"values": [Vector2(923, 238), Vector2(923, 658)]
 }
 
 [sub_resource type="Animation" id="Animation_yufoy"]
@@ -339,10 +339,10 @@ tracks/0/path = NodePath("../NPC Images/NPC3:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0.001, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(912.00006, 634), Vector2(912.00006, 248.00003)]
+"values": [Vector2(923, 653), Vector2(923, 238)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m3v6d"]
@@ -379,7 +379,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(18, 249.00002), Vector2(18, 657)]
+"values": [Vector2(18, 237), Vector2(18, 657)]
 }
 
 [sub_resource type="Animation" id="Animation_pfpkg"]
@@ -394,7 +394,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(18, 656), Vector2(18, 239)]
+"values": [Vector2(18, 656), Vector2(18, 237)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t6t0s"]
@@ -446,13 +446,13 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="GreenButton" type="Area2D" parent="ButtonContainer" unique_id=666438941]
-position = Vector2(363, 102)
+position = Vector2(372, 102)
 script = ExtResource("2_61474")
 buttonChoice = "GREEN"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ButtonContainer/GreenButton" unique_id=1426957851]
 sprite_frames = SubResource("SpriteFrames_2h45r")
-animation = &"Idle"
+animation = &"Hover"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonContainer/GreenButton" unique_id=80222025]
 position = Vector2(0, -2)
@@ -479,39 +479,39 @@ offset_bottom = 40.0
 
 [node name="NPC1" type="TextureRect" parent="NPC Images" unique_id=815420663]
 layout_mode = 0
-offset_left = 939.0
-offset_top = 250.0
-offset_right = 2219.0
-offset_bottom = 1530.0
-scale = Vector2(0.1526392, 0.1526392)
-texture = ExtResource("5_5hf3l")
+offset_left = 923.00006
+offset_top = 238.0
+offset_right = 2202.997
+offset_bottom = 1518.0
+scale = Vector2(0.16890669, 0.16890669)
+texture = ExtResource("5_ercc2")
 
-[node name="NPC2" type="TextureRect" parent="NPC Images" unique_id=1801444703]
+[node name="NPC2" type="TextureRect" parent="NPC Images" unique_id=929159046]
 layout_mode = 0
-offset_left = 857.0
-offset_top = 250.0
-offset_right = 4697.0
-offset_bottom = 2411.961
-scale = Vector2(0.09167952, 0.09167952)
+offset_left = 923.0
+offset_top = 238.0
+offset_right = 2202.997
+offset_bottom = 1518.0
+scale = Vector2(0.16890669, 0.16890669)
 texture = ExtResource("6_ercc2")
 
-[node name="NPC3" type="TextureRect" parent="NPC Images" unique_id=1395179902]
+[node name="NPC3" type="TextureRect" parent="NPC Images" unique_id=1863941815]
 layout_mode = 0
-offset_left = 912.00006
-offset_top = 250.0
-offset_right = 2192.0
-offset_bottom = 1530.0
-scale = Vector2(0.19279619, 0.19279619)
-texture = ExtResource("7_pfpkg")
+offset_left = 923.0
+offset_top = 238.0
+offset_right = 2202.997
+offset_bottom = 1518.0
+scale = Vector2(0.16890669, 0.16890669)
+texture = ExtResource("7_ercc2")
 
 [node name="AdvisorNPC" type="TextureRect" parent="NPC Images" unique_id=101850387]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 237.0
-offset_right = 194.0
-offset_bottom = 479.00003
-scale = Vector2(0.868, 0.868)
-texture = ExtResource("6_507jh")
+offset_right = 414.0
+offset_bottom = 618.0002
+scale = Vector2(0.58093184, 0.58093184)
+texture = ExtResource("8_ercc2")
 
 [node name="ChoiceText" type="Control" parent="." unique_id=1368075673]
 layout_mode = 3

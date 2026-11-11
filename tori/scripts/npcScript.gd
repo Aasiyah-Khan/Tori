@@ -1,5 +1,5 @@
 class_name NPCController #Other scripts can refer to this script using that name
-extends Sprite3D
+extends AnimatedSprite3D
 
 #this a signal we created named finished
 #it sends npc info from the NPC Controller class 
@@ -13,7 +13,7 @@ signal finished(npc: NPCController)
 @export var player: CharacterBody3D #Put in player in the inspector
 
 #Speed of NPC
-const SPEED = 1
+const SPEED = 0.85
 
 #Bools
 var can_move = false
@@ -28,6 +28,9 @@ var is_active = false
 #THE OPENING DIALOGUE, GREEN OR RED DIALOGUE, AND MORE
 #each resource is just a copy of the class Dialoge Data but we put our info in the inspector
 #resources hold information like a box
+
+#Audio For Spawning NPC
+@onready var knocking_audio: AudioStreamPlayer3D = $"../../knockingAudio"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -48,11 +51,13 @@ func _process(delta: float) -> void:
 func activate_npc(): #FUNCTION TO ACTIVATE NPC
 	is_active = true
 	show()
+	knocking_audio.play()
 	can_move = true
 
 func _on_area_3d_body_entered(body): #assign body to player (player is assigned in the inspector as the PlayerController)
 	if is_active == true and body == player: #if THIS NPC IS CURRENTLY ACTIVE AND the body detected is the player run this code:
 		can_move = false #NO MORE MOVING
+		stop() #Stop Animation of the AnimatedSprite3d
 		
 		#Specific resource for this npc with its specific dialogue will be used for this convo
 		#AND Start dialogue with this resource!

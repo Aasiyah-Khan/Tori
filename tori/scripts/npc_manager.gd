@@ -12,7 +12,7 @@ extends Node3D
 @export var player: CharacterBody3D
 
 #Current NPC
-var current_npc: NPCController #The 3DSprite with the npcScript (the datatype is NPCController class but holds different NPC info depending on which is the current NPC)
+var current_npc: NPCController #The 3DAnimatedSprite with the npcScript (the datatype is NPCController class but holds different NPC info depending on which is the current NPC)
 #Starts at the first NPC
 
 #Next NPC to spawn 
