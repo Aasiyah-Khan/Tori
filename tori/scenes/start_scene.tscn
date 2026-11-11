@@ -125,9 +125,9 @@ z_index = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -102.0
+offset_left = -100.0
 offset_top = 353.0
-offset_right = 133.0
+offset_right = 135.0
 offset_bottom = 459.0
 grow_horizontal = 2
 scale = Vector2(0.6934446, 0.53825307)
@@ -140,9 +140,9 @@ text = "Start"
 script = ExtResource("3_sg87u")
 
 [node name="TORI" type="Label" parent="DialogueManager2" unique_id=825556283]
-offset_left = 376.0
+offset_left = 378.0
 offset_top = 171.0
-offset_right = 726.0
+offset_right = 728.0
 offset_bottom = 341.0
 theme_override_colors/font_color = Color(0.9864964, 0.4844172, 5.7756904e-07, 1)
 theme_override_fonts/font = ExtResource("2_0kdh5")
