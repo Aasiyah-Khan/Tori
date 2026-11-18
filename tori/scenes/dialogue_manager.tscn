@@ -560,7 +560,7 @@ libraries/ = SubResource("AnimationLibrary_t6t0s")
 
 [node name="TypingAudio" type="AudioStreamPlayer2D" parent="." unique_id=1281338815]
 stream = ExtResource("7_jf0e1")
-volume_db = -8.0
+volume_db = -4.0
 pitch_scale = 0.45
 
 [connection signal="input_event" from="ButtonContainer/GreenButton" to="ButtonContainer/GreenButton" method="_on_input_event"]

@@ -155,7 +155,7 @@ autoplay = true
 
 [node name="TypingAudio" type="AudioStreamPlayer2D" parent="." unique_id=2065945287]
 stream = ExtResource("3_0kdh5")
-volume_db = -8.0
+volume_db = -4.0
 pitch_scale = 0.45
 
 [node name="Timer" type="Timer" parent="." unique_id=848558910]
