@@ -185,7 +185,6 @@ func advanceDialogue():
 		isDialogueActive = false
 		showChoicesAfterDialogue = false
 		
-		dialogueBox.visible = false
 		green_button.visible = false
 		red_button.visible = false
 		
@@ -204,6 +203,7 @@ func advanceDialogue():
 			if advisor_portrait_active == true:
 				advisor_npc_animation_player.play("pop_down")
 			
+			#Wait for the NPC Portrait animations to finish
 			if currentDialogueData.useNPCPortrait == true:
 				await current_npc_animation_player.animation_finished
 			
@@ -216,10 +216,14 @@ func advanceDialogue():
 			npc_3.hide()
 			advisor_npc.hide()
 			
+			#Hide dialogue box AFTER animations finish
 			dialogueBox.hide()
+			
+			#Hide Buttons
 			green_button.hide()
 			red_button.hide()
-
+			
+			#Self Explanatory
 			branchDialogueFinished = true
 			
 			#Tell NPCManager the conversation is finished

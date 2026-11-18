@@ -205,10 +205,10 @@ tracks/0/path = NodePath("NPC Images/NPC1:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
 "update": 0,
-"values": [Vector2(923.00006, 238)]
+"values": []
 }
 
 [sub_resource type="Animation" id="Animation_507jh"]
@@ -223,7 +223,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(923, 238), Vector2(939, 660)]
+"values": [Vector2(859, 165), Vector2(859, 653)]
 }
 
 [sub_resource type="Animation" id="Animation_jf0e1"]
@@ -238,7 +238,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(923, 653), Vector2(923, 238)]
+"values": [Vector2(859, 657), Vector2(859, 165)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jcw1y"]
@@ -260,7 +260,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(923, 238)]
+"values": [Vector2(859, 165)]
 }
 
 [sub_resource type="Animation" id="Animation_ni401"]
@@ -275,7 +275,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(923, 238), Vector2(923, 656)]
+"values": [Vector2(859, 165), Vector2(859, 652)]
 }
 
 [sub_resource type="Animation" id="Animation_qbc2s"]
@@ -290,7 +290,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(923, 650), Vector2(923, 238)]
+"values": [Vector2(859, 657), Vector2(859, 165)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sxg8s"]
@@ -312,7 +312,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(923, 238)]
+"values": [Vector2(859, 165)]
 }
 
 [sub_resource type="Animation" id="Animation_l6q0n"]
@@ -327,7 +327,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(923, 238), Vector2(923, 658)]
+"values": [Vector2(859, 165), Vector2(859, 655)]
 }
 
 [sub_resource type="Animation" id="Animation_yufoy"]
@@ -339,10 +339,10 @@ tracks/0/path = NodePath("../NPC Images/NPC3:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.001, 1),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(923, 653), Vector2(923, 238)]
+"values": [Vector2(859, 653), Vector2(859, 165)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m3v6d"]
@@ -364,7 +364,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(18, 237)]
+"values": [Vector2(6, 165)]
 }
 
 [sub_resource type="Animation" id="Animation_ercc2"]
@@ -379,7 +379,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(18, 237), Vector2(18, 657)]
+"values": [Vector2(6, 165), Vector2(6, 655)]
 }
 
 [sub_resource type="Animation" id="Animation_pfpkg"]
@@ -394,7 +394,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(18, 656), Vector2(18, 237)]
+"values": [Vector2(6, 663), Vector2(6, 165)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t6t0s"]
@@ -479,38 +479,38 @@ offset_bottom = 40.0
 
 [node name="NPC1" type="TextureRect" parent="NPC Images" unique_id=815420663]
 layout_mode = 0
-offset_left = 923.00006
-offset_top = 238.0
-offset_right = 2202.997
-offset_bottom = 1518.0
-scale = Vector2(0.16890669, 0.16890669)
+offset_left = 859.0
+offset_top = 165.0
+offset_right = 2138.997
+offset_bottom = 1445.0
+scale = Vector2(0.22530001, 0.22530001)
 texture = ExtResource("5_ercc2")
 
 [node name="NPC2" type="TextureRect" parent="NPC Images" unique_id=929159046]
 layout_mode = 0
-offset_left = 923.0
-offset_top = 238.0
-offset_right = 2202.997
-offset_bottom = 1518.0
-scale = Vector2(0.16890669, 0.16890669)
+offset_left = 859.0
+offset_top = 165.0
+offset_right = 2138.997
+offset_bottom = 1445.0
+scale = Vector2(0.22530001, 0.22530001)
 texture = ExtResource("6_ercc2")
 
 [node name="NPC3" type="TextureRect" parent="NPC Images" unique_id=1863941815]
 layout_mode = 0
-offset_left = 923.0
-offset_top = 238.0
-offset_right = 2202.997
-offset_bottom = 1518.0
-scale = Vector2(0.16890669, 0.16890669)
+offset_left = 859.0
+offset_top = 165.0
+offset_right = 2138.997
+offset_bottom = 1445.0
+scale = Vector2(0.22530001, 0.22530001)
 texture = ExtResource("7_ercc2")
 
 [node name="AdvisorNPC" type="TextureRect" parent="NPC Images" unique_id=101850387]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 237.0
-offset_right = 414.0
-offset_bottom = 618.0002
-scale = Vector2(0.58093184, 0.58093184)
+offset_left = 6.0
+offset_top = 165.0
+offset_right = 402.0
+offset_bottom = 546.00085
+scale = Vector2(0.7748891, 0.7748891)
 texture = ExtResource("8_ercc2")
 
 [node name="ChoiceText" type="Control" parent="." unique_id=1368075673]
