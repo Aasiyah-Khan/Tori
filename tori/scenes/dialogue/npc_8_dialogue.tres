@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://ujhyx5olt6em"]
+
+[ext_resource type="Script" uid="uid://br4ab8xxtyphg" path="res://scripts/dialogue_data.gd" id="1_u0hvt"]
+
+[resource]
+script = ExtResource("1_u0hvt")
+openingDialogue = Array[String](["Hi", "Testing"])
+greenDialogue = Array[String](["Yes yes "])
+redDialogue = Array[String](["No no"])
+greenChoiceText = "Choose this for Yes"
+redChoiceText = "Choose this for No"
+metadata/_custom_type_script = "uid://br4ab8xxtyphg"

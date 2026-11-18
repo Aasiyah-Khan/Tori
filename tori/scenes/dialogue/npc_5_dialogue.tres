@@ -5,8 +5,8 @@
 [resource]
 script = ExtResource("1_dy44c")
 openingDialogue = Array[String](["Social Citizen- The mood around our village has been rather dreary for some time. ", "Social Citizen- It’s almost rainy season. How about a festival and a gala to brighten things up?", "Advisor- That sounds like a splendid idea, right, Chief?", "Advisor- *Whispers* With talk of the Marriac Commune expanding ever closer to our borders, the people could use a distraction."])
-yesDialogue = Array[String](["You- A party sounds like a great idea.", "You- I trust you'll handle all of the details?", "Social Citizen- Of course, it'll be the party of the century."])
-noDialogue = Array[String](["You- Maybe this isn't the time for a party.", "You- We need to stay vigilant.", "Social Citizen- You are no fun. The people will resent you for this."])
+greenDialogue = Array[String](["You - A party sounds like a great idea.", "You - I trust you'll handle all of the details?", "Social Citizen - Of course, it'll be the party of the century."])
+redDialogue = Array[String](["You - Maybe this isn't the time for a party.", "You - We need to stay vigilant.", "Social Citizen - You are no fun. The people will resent you for this."])
 greenChoiceText = "Agree"
 redChoiceText = "Disagree"
 advisorAppearsAtLine = 3

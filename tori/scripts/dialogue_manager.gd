@@ -261,10 +261,10 @@ func _on_dialogue_button_selected(choice: String) -> void:
 	red_text.hide()
 
 	if choice == "GREEN":
-		playBranchDialogue(currentDialogueData.yesDialogue)
+		playBranchDialogue(currentDialogueData.greenDialogue)
 		
 	elif choice == "RED":
-		playBranchDialogue(currentDialogueData.noDialogue)
+		playBranchDialogue(currentDialogueData.redDialogue)
 
 
 func playBranchDialogue(lines: Array[String]):
@@ -301,6 +301,14 @@ func check_advisor_portrait():
 			advisor_npc_animation_player.play("pop_up")
 			advisor_portrait_active = true
 			
+	
+	if advisor_portrait_active == true and isBranchDialogue == false:
+		if currentDialogueData.advisorDisappearAtLine == currentLineIndex + 1:
+			advisor_npc_animation_player.play("pop_down")
+			
+			await advisor_npc_animation_player.animation_finished
+			advisor_npc.hide()
+			advisor_portrait_active = false
 
 
 func select_npc_portrait():

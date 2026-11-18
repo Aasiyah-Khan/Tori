@@ -7,8 +7,8 @@ class_name DialogueData #Lets other scripts recognize the name DialogueData
 
 #WE can edit these in the resource's inspector (the resource id kind of like a node but instead holds resuable data)
 @export var openingDialogue: Array[String] #Opening Dialogue so when they first greet you
-@export var yesDialogue: Array[String] #This is after you select yes (or green)
-@export var noDialogue: Array[String] #This is after you select no (or red)
+@export var greenDialogue: Array[String] #This is after you select yes (or green)
+@export var redDialogue: Array[String] #This is after you select no (or red)
 
 #THESE NAMES WILL BE CHANGED LATER and we might need to add another dialogue array for the advisor
 #But I don't reccomend doing that since it would BE SO MUCH WORK but idm doing it if you guys want me too
@@ -24,6 +24,9 @@ class_name DialogueData #Lets other scripts recognize the name DialogueData
 
 #Line where the Advisor appears
 @export var advisorAppearsAtLine: int = 0
+
+#To make advisor disappear
+@export var advisorDisappearAtLine: int = 0
 
 #Which NPC portrait should appear?
 @export var NPCPortrait: int = 0
