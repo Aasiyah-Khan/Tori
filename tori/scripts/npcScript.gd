@@ -106,6 +106,9 @@ func _on_dialogue_finished(): #REMEMBER FUNCTION RUNS AFTER SIGNAL RECEIVED FROM
 		#Start walking away
 		is_walking_to_exit = true
 		
+		#Rotate NPC (Bc Godot uses radians and idk circle math
+		rotation.y = deg_to_rad(180)
+		
 		#Play walking animation again
 		play("default")
 		
